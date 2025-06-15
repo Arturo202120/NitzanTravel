@@ -1,30 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Nitzan Travel - Transporte Terrestre en Perú</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="logo-container">
+            <img id:"logo" src="logo/logo.png" alt="Nitzan Travel Logo" class="logo">
+        </div>
+        <div class="header-content">
+            <h1>Nitzan Travel</h1>
+            <p>¡Tu viaje comienza con nosotros! <br>
+            Transporte privado en minivan a eventos, destinos turísticos y más.</p>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>About</h2>
-            <p>This is a sample website created as a starting point for your project.</p>
+    <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <ul>
+                <li>Transporte a eventos (conciertos, ferias, convenciones, etc.)</li>
+                <li>Viajes a cualquier parte del Perú</li>
+                <li>Traslados grupales y privados</li>
+                <li>Rutas personalizadas según tu necesidad</li>
+            </ul>
         </section>
-    </main>
+        <section id="nosotros">
+            <h2>Sobre Nitzan Travel</h2>
+            <p>
+                Somos una empresa peruana dedicada al transporte terrestre de pasajeros. 
+                Nos especializamos en llevarte a eventos, actividades ASAI y a cualquier destino dentro del Perú, 
+                brindando seguridad, puntualidad y comodidad en cada viaje.
+            </p>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Listo para tu próximo viaje? ¡Contáctanos!</p>
+            <ul>
+                <li>Teléfono: <a href="tel:+51999999999">+51 999 999 999</a></li>
+                <li>Email: <a href="mailto:contacto@nitzantravel.pe">contacto@nitzantravel.pe</a></li>
+            </ul>
+            <a class="btn" href="mailto:contacto@nitzantravel.pe">Solicitar Cotización</a>
+        </section>
+    </div>
     <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        &copy; 2025 Nitzan Travel. Todos los derechos reservados.
