@@ -85,7 +85,7 @@ h2 {
 
 .bloques{
     padding: 18px;
-    text-align: center, justify;
+    text-align:justify;
    
 }
 
@@ -93,6 +93,7 @@ h2 {
 section{
     padding: 5px;
     margin-top: 30px;
+    
 }
 
 
