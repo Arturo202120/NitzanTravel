@@ -46,7 +46,7 @@ nav {
     text-align: center;
 }
 
-nav a:hover{ background-color: yellow;}
+nav a:hover{ color: yellow;}
 
 nav a {
     color: #fff;
@@ -84,6 +84,9 @@ footer {
     margin-top: 1rem;
     display: inline-block;
 }
+
+
+
 
 /* Ajusta el header y el logo para que sean responsivos */
 
