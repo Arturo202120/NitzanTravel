@@ -168,7 +168,10 @@ footer {
 
 
 #centrado{
-    text-align: center;
+    display: flex;
+    flex-direction: column;      /* Opcional: apila verticalmente */
+    align-items: center;         /* Centra horizontalmente */
+    justify-content: center; 
     
 }
 
