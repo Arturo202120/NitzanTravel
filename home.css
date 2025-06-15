@@ -86,3 +86,26 @@ footer {
 }
 
 /* Ajusta el header y el logo para que sean responsivos */
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .logo-container,
+    .header-content {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .logo {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
