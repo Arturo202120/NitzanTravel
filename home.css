@@ -107,7 +107,7 @@ section{
 
 
 
-P{ font-family: Arial;}
+P{ font-family: "Poppins", sans-serif;}
 
 footer {
     background: #1e3d59;
@@ -150,6 +150,12 @@ footer {
 .rajdhani-bold {
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
