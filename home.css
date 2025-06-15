@@ -185,25 +185,25 @@ footer {
     h1 {
         font-size: 60px;
         text-align: start;
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
     h3 {
         font-size: 25px;
         text-align: start;
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
     .borde {
         font-size: 18px;
         text-align: start;
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
 .header-content h1,
 .header-content h3,
 .header-content p {
-    margin: 0;           /* Elimina el margen por defecto */
+    margin-bottom: 38%;          /* Elimina el margen por defecto */
     line-height: 1;    /* Ajusta el interlineado, puedes probar con 1 o 1.1 si quieres aún más juntos */
 }
 
