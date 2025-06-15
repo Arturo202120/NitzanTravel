@@ -22,7 +22,7 @@ header::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-     background: rgba(57, 102, 218, 0.148); /* Semi-transparent overlay */
+     background: rgba(0, 0, 0, 0.575); /* Semi-transparent overlay */
     z-index: 1;
 }
 header > * {
@@ -107,7 +107,9 @@ section{
 
 
 
-P{ font-family: "Poppins", sans-serif;}
+P{ font-family: "Poppins", sans-serif;
+color: #e5e5e5;
+}
 
 footer {
     background: #1e3d59;
