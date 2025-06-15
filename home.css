@@ -166,6 +166,74 @@ footer {
 
 
 
+
+
+  
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 10px;
+        
+        }
+
+        .cuadros{
+            color: black;
+            
+        }
+        .feature-block {
+            background: #faf6f6;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 28px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature-block .material-icons {
+            font-size: 48px;
+            color: #1976d2;
+            margin-bottom: 12px;
+        }
+        .feature-block h3 {
+            margin: 10px 0 8px 0;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.3em;
+        }
+        .feature-block p {
+            font-family: 'Poppins', sans-serif;
+            color: #444;
+            font-size: 1em;
+        }
+       
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Ajusta el header y el logo para que sean responsivos */
 
 @media (max-width: 700px) {
@@ -224,6 +292,9 @@ footer {
 .header-content h3 {
     margin-bottom: 0px;  /* Espacio pequeño debajo del h3 */
 }
+
+/* 4 bloques */
+
 
 
 }
