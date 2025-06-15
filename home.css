@@ -22,7 +22,7 @@ header::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-     background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+     background: rgba(57, 102, 218, 0.148); /* Semi-transparent overlay */
     z-index: 1;
 }
 header > * {
@@ -61,16 +61,16 @@ nav a {
     background: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(81, 79, 79, 0.07);
+    box-shadow: 0 2px 8px rgba(54, 122, 224, 0.585);
 }
 h1{
-    color: #2391ff;
+    color: #fefefe;
     font-family: "Rajdhani", sans-serif;
     font-size: 80px;
 }
 
 h3 {
-    color: #ffffff;
+    color: #ed9039;
     font-family: "Rajdhani", sans-serif;
 }
 
