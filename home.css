@@ -80,15 +80,20 @@ h2 {
     border-radius: 20px;
     color: white;
     text-align: center;
+    
 }
 
 .bloques{
     padding: 18px;
     text-align: center, justify;
+   
 }
 
 
-
+section{
+    padding: 5px;
+    margin-top: 30px;
+}
 
 
 
