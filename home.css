@@ -16,6 +16,7 @@ header {
     align-items: center;
     position: relative;
     overflow: hidden;
+    
 }
 header::before {
     content: "";
@@ -96,6 +97,7 @@ footer {
         height: auto;
         padding: 1rem 0;
         text-align: center;
+        
     }
     .logo-container,
     .header-content {
@@ -103,6 +105,7 @@ footer {
         text-align: center;
         margin: 0;
         padding: 0;
+        
     }
     .logo {
         width: 140px;
