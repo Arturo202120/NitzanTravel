@@ -70,7 +70,7 @@ h1{
 }
 
 h3 {
-    color: #ed9039;
+    color: yellow;
     font-family: "Rajdhani", sans-serif;
 }
 
@@ -135,6 +135,11 @@ footer {
 .btn:hover {
     color: black;
     background-color: yellow;
+}
+
+
+#amabtn{
+    color: yellow;
 }
 
 .borde{
