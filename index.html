@@ -97,6 +97,53 @@
             <a class="btn" href="tel:+51955515100">Solicitar Cotización</a>
         </section>
     </div>
+    
+    <div class="cotizaciones-inmediatas">
+        <h4>COTIZACIONES INMEDIATAS</h4>
+        <form id="cotizacionForm" autocomplete="off">
+            <div>
+                <label for="nombre">Nombre y Apellidos:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9+ ]{7,}">
+            </div>
+            <button type="submit" class="btn">QUIERO QUE ME LLAMEN</button>
+        </form>
+        <div id="mensajeConfirmacion" style="display:none; margin-top:10px; color:green;">
+            En breve un agente les llamará.
+        </div>
+    </div>
+    <script>
+    document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('mensajeConfirmacion').style.display = 'block';
+
+        // Datos del formulario
+        var nombre = document.getElementById('nombre').value.trim();
+        var telefono = document.getElementById('telefono').value.trim();
+
+        // Mensaje para WhatsApp
+        var mensaje = encodeURIComponent(
+            "Nueva solicitud de llamada:\nNombre: " + nombre + "\nTeléfono: " + telefono + "\nEn breve un agente les llamará."
+        );
+
+        // Número de WhatsApp de destino
+        var numero = "51913134722";
+
+        // Enviar mensaje a WhatsApp (sin mostrar al usuario)
+        var url = "https://wa.me/" + numero + "?text=" + mensaje;
+        var iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = url;
+        document.body.appendChild(iframe);
+
+        // Limpiar formulario
+        document.getElementById('cotizacionForm').reset();
+    });
+    </script>
+
     </main>
     <footer>
         &copy; 2025 Nitzan Travel. Todos los derechos reservados.
