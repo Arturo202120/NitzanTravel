@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     background: #f5f7fa;
     margin: 0;
     padding: 0;
@@ -373,14 +373,32 @@ footer {
 }
 
 
-.banners{
+.divbanners{
 
-width: 100%;
-height: 100%;
+background-color: #f6f2f2;
+margin-left: 15px;
+margin-right: 15px;
+border-radius: 20px;
+padding: 10px;
+text-align: justify;
 
 }
 
 
+.banners{
+
+width: 92%;
+height: 100%;
+margin-left: 15px;
+margin-right: 15px;
+border-radius: 20px;
+margin-top: 12px;
+}
+
+h5{
+    text-align: center;
+
+}
 
 
 
