@@ -22,7 +22,7 @@ header::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-     background: rgba(25, 71, 101, 0.351); /* Semi-transparent overlay */
+     bckground: rgba(25, 71, 101, 0.351); /* Semi-transparent overlay */
     z-index: 1;
 }
 header > * {
@@ -288,7 +288,7 @@ footer {
 
 @media (max-width: 700px) {
     header {
-        background: url('logo/5.png') center center/cover no-repeat; width: 100%;
+        background: url('logo/6.png') center center/cover no-repeat; width: 100%;
         flex-direction: column;
         height: auto;
         padding: 1rem 0;
