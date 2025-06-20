@@ -22,7 +22,7 @@ header::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-     background: rgba(0, 0, 0, 0.575); /* Semi-transparent overlay */
+     background: rgba(25, 71, 101, 0.351); /* Semi-transparent overlay */
     z-index: 1;
 }
 header > * {
@@ -67,6 +67,7 @@ h1{
     color: #fefefe;
     font-family: "Rajdhani", sans-serif;
     font-size: 80px;
+    
 }
 
 h3 {
@@ -144,6 +145,8 @@ footer {
 
 .borde{
     margin: 6px;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 
