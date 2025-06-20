@@ -19,8 +19,14 @@
 <body>
     <!-- Agrega esto justo antes de cerrar el </body> -->
 <a href="https://wa.me/51955515100?text=Hola%2C%20quiero%20cotizar%20un%20viaje%20con%20Nitzan%20Travel%20%F0%9F%98%8A" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:40px; height:40px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:40px; height:40px;">
 </a>
+<a href="" class="tel-float">
+        <img src="./logo/icons8-teléfono-48.png" alt="Teléfono" style="width:40px; height:40px; margin-left:10px; cursor:pointer;" onclick="window.location.href='tel:+51955515100'">
+
+</a>
+
+
     <header>
         <div class="logo-container">
             <img id="logo" src="logo/logoC.png" alt="Nitzan Travel Logo" class="logo">
@@ -134,35 +140,7 @@
 
 
 
-    <script>
-    document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.getElementById('mensajeConfirmacion').style.display = 'block';
-
-        // Datos del formulario
-        var nombre = document.getElementById('nombre').value.trim();
-        var telefono = document.getElementById('telefono').value.trim();
-
-        // Mensaje para WhatsApp
-        var mensaje = encodeURIComponent(
-            "Nueva solicitud de llamada:\nNombre: " + nombre + "\nTeléfono: " + telefono + "\nEn breve un agente les llamará."
-        );
-
-        // Número de WhatsApp de destino
-        var numero = "51913134722";
-
-        // Enviar mensaje a WhatsApp (sin mostrar al usuario)
-        var url = "https://wa.me/" + numero + "?text=" + mensaje;
-        var iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = url;
-        document.body.appendChild(iframe);
-
-        // Limpiar formulario
-        document.getElementById('cotizacionForm').reset();
-    });
-    </script>
-
+  
     </main>
     <footer>
         &copy; 2025 Nitzan Travel. Todos los derechos reservados.
