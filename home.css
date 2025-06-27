@@ -214,6 +214,14 @@ footer {
             font-size: 45px;
             color: #1976d2;
         }
+         h5{
+            text-align: center;
+            margin-bottom: 1px;
+            font-family:"Rajdhani", sans-serif;;
+            font-size: 30px;
+            color: #1976d2;
+        }
+
 
         .feature-block {
             background: #faf6f6;
@@ -296,7 +304,6 @@ footer {
 
     transition: box-shadow 0.2s;
 }
-
 
 .bloques{
     color: #444;
@@ -408,27 +415,23 @@ footer {
 
 
 
-
-
-
-
 .carousel-wrapper {
   background: #faf6f6;
   border-radius: 20px;
   padding: 8px;
   margin: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.bane {margin-bottom: 25px;
-font-size: 28px;
+  position: relative;
 }
 
 .carousel-container {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  border-radius: 20px;}
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+}
 
 .carousel-track {
   display: flex;
@@ -440,9 +443,11 @@ font-size: 28px;
 .carousel-slide {
   flex: 0 0 100%;
   max-width: 100%;
+  height: auto;
   scroll-snap-align: center;
   border-radius: 10px;
   object-fit: cover;
+  transition: opacity 0.6s ease; /* transiciones suaves */
 }
 
 .carousel-dots {
@@ -454,24 +459,24 @@ font-size: 28px;
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  border-radius: 5%;
+  border-radius: 50%;
   border: none;
   background-color: #ccc;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .carousel-dots button.active {
   background-color: #333;
 }
 
-/* Ocultar scrollbar en navegadores modernos */
+/* Ocultar scrollbar */
 .carousel-container::-webkit-scrollbar {
   display: none;
 }
-
 .carousel-container {
-  -ms-overflow-style: none;  /* IE y Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 
