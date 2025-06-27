@@ -96,6 +96,24 @@ body{
 	transition: 0.2s all;
     border-radius: 10px;
 }
+
+#spini{
+	height: 60px;
+	width: 200px;
+	background: #ff3c00;
+	position: absolute;
+	margin-top: 620px;
+	font-size: 30px;
+	color: white;
+	font-weight: 1000;
+	letter-spacing: 4px;
+	border: 1px solid white;
+	cursor: pointer;
+	box-shadow: 0 5px 10px gray;
+	transition: 0.2s all;
+    border-radius: 10px;
+} 
+
 #spin:hover{
 	box-shadow: none;
     background-color: #eeff00;
@@ -142,3 +160,10 @@ body{
   opacity: 1; /* Cambia si quieres más brillo o menos */
 }
 
+#spin[disabled] {
+  font-size: 16px;
+  letter-spacing: normal;
+  background: #ccc;
+  color: #333;
+  cursor: not-allowed;
+}

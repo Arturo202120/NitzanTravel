@@ -38,7 +38,20 @@ let premios = [
   }
 ];
 
+// Verificar si ya jugó hoy
+const hoy = new Date().toLocaleDateString();
+const ultimaFecha = localStorage.getItem("giroRuleta");
+
+if (ultimaFecha === hoy) {
+  btn.disabled = true;
+  btn.innerText = "Ya jugaste hoy 😊";
+}
+
 btn.onclick = function () {
+  // Verifica de nuevo por seguridad
+  const fechaGuardada = localStorage.getItem("giroRuleta");
+  if (fechaGuardada === hoy) return;
+
   // ▶️ Reproducir sonido de giro
   spinSound.currentTime = 0;
   spinSound.play();
@@ -48,7 +61,6 @@ btn.onclick = function () {
   container.style.transform = `rotate(${random}deg)`;
 
   setTimeout(() => {
-    // ⏹️ Detener sonido de giro y reproducir fin
     spinSound.pause();
     endSound.currentTime = 0;
     endSound.play();
@@ -63,6 +75,12 @@ btn.onclick = function () {
     setTimeout(() => {
       mensaje.style.opacity = "0";
     }, 7000);
+
+    // Guardar la fecha actual
+    localStorage.setItem("giroRuleta", hoy);
+    btn.disabled = true;
+    btn.innerText = "Ya jugaste hoy";
+
   }, 3000);
 };
 
