@@ -452,7 +452,7 @@ font-size: 28px;
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  border-radius: 50%;
+  border-radius: 5%;
   border: none;
   background-color: #ccc;
   cursor: pointer;
@@ -497,7 +497,27 @@ font-size: 28px;
 }
 
 
+.tio-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 0;
+}
 
+.tio-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s linear;
+  padding: 10px; 
+}
+
+.tioimg {
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
 
 
 

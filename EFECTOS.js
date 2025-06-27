@@ -64,3 +64,24 @@ container.addEventListener("scroll", () => {
     updateDots();
   }
 });
+
+
+
+// fotos tio y jusrto arriba banners  //
+
+// Carrusel TIO automático
+const tioContainer = document.querySelector(".tio-container");
+
+if (tioContainer) {
+  let velocidad = 3; // Ajusta velocidad aquí
+
+  function deslizar() {
+    tioContainer.scrollLeft += velocidad;
+    // Si llegó al final de la mitad duplicada, reinicia al inicio
+    if (tioContainer.scrollLeft >= tioContainer.scrollWidth / 2) {
+      tioContainer.scrollLeft = 0;
+    }
+  }
+
+  setInterval(deslizar, 20); // Repite cada 20ms
+}
