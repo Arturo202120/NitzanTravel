@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="ruleta.css">
+	<title>Lucky Spin</title>
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+  <source src="fondo.mp4" type="video/mp4">
+  Tu navegador no soporta video en HTML5.
+</video>
+
+	<div class="container">
+		<div class="one">DJ Nitzan</div>
+		<div class="two">Especial</div>
+		<div class="three">Nada</div>
+		<div class="four">Cupón</div>
+		<div class="five">DJ Nitzan</div>
+		<div class="six">Nada</div>
+	</div>
+		<span class="mid"></span>
+		<button id="spin">Gira</button>
+		<div class="stoper"></div>
+     <audio id="spin-sound" src="sonido.mp3" preload="auto"></audio>
+    <audio id="end-sound" src="fin.mp3" preload="auto"></audio>
+	<script src="ruleta.js"></script>
+   
+</body>
+</html>
