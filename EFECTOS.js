@@ -85,3 +85,55 @@ if (tioContainer) {
 
   setInterval(deslizar, 20); // Repite cada 20ms
 }
+
+
+// efecto de iconos y todo al deslizar//
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bloques = document.querySelectorAll(".feature-block");
+
+  const mostrarAlScroll = () => {
+    bloques.forEach((bloque) => {
+      const rect = bloque.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.85 && rect.bottom >= 0) {
+        bloque.classList.add("visible");
+      } else {
+        bloque.classList.remove("visible"); // ← permite ocultar con efecto al subir
+      }
+    });
+  };
+
+  window.addEventListener("scroll", mostrarAlScroll);
+  mostrarAlScroll(); // por si ya están visibles al cargar
+});
+
+
+
+// efecto header con mi nav //
+
+document.addEventListener("DOMContentLoaded", () => {
+  const headerContent = document.querySelector(".header-content");
+  const logoContainer = document.querySelector(".logo-container");
+
+  function mostrarHeader() {
+    const headerTop = headerContent.getBoundingClientRect().top;
+
+    if (headerTop <= window.innerHeight) {
+      headerContent.classList.add("visible");
+      logoContainer.classList.add("visible");
+    }
+  }
+
+  function efectoParallax() {
+    const header = document.querySelector("header");
+    const scrollY = window.scrollY;
+    header.style.backgroundPosition = `center ${scrollY * 0.5}px`;
+  }
+
+  window.addEventListener("scroll", () => {
+    mostrarHeader();
+    efectoParallax();
+  });
+
+  mostrarHeader(); // Llamado inicial
+});
