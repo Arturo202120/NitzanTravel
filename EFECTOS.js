@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
+// empieza // 
 const container = document.getElementById("carousel-container");
 const track = document.getElementById("carousel-track");
 const slides = document.querySelectorAll(".carousel-slide");
