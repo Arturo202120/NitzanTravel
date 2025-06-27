@@ -73,18 +73,22 @@ container.addEventListener("scroll", () => {
 const tioContainer = document.querySelector(".tio-container");
 
 if (tioContainer) {
-  let velocidad = 3; // Ajusta velocidad aquí
+  let velocidad = 2; // Velocidad suave
+  let scrollTio = 0;
 
-  function deslizar() {
-    tioContainer.scrollLeft += velocidad;
-    // Si llegó al final de la mitad duplicada, reinicia al inicio
-    if (tioContainer.scrollLeft >= tioContainer.scrollWidth / 2) {
-      tioContainer.scrollLeft = 0;
+  function deslizarSuavemente() {
+    scrollTio += velocidad;
+    if (scrollTio >= tioContainer.scrollWidth / 2) {
+      scrollTio = 0;
     }
+
+    tioContainer.scrollLeft = scrollTio;
+    requestAnimationFrame(deslizarSuavemente);
   }
 
-  setInterval(deslizar, 20); // Repite cada 20ms
+  requestAnimationFrame(deslizarSuavemente);
 }
+
 
 
 // efecto de iconos y todo al deslizar//
