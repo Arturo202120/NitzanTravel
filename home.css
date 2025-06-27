@@ -280,13 +280,13 @@ footer {
     bottom: 99px;
     right: 24px;
     z-index: 1000;
-    background: #00bfff;
+    background:#00bfff;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    
+
     transition: box-shadow 0.2s;
 }
 
@@ -394,31 +394,69 @@ footer {
 }
 
 
-.divbanners{
-    background-color: #faf6f6;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 20px;
-    padding: 3px;
-    text-align: justify;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+
+
+
+
+
+
+
+
+
+
+.carousel-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 20px auto;
+  position: relative;
 }
 
-
-.banners{
-
-width: 92%;
-height: 100%;
-margin-left: 15px;
-margin-right: 15px;
-border-radius: 20px;
-margin-top: 12px;
+.carousel-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  gap: 20px;
 }
+
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 92%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 h5{
     text-align: center;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

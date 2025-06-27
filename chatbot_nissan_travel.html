@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatBot Nitzan Travel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #chatbot-button {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    #chat-window {
+      display: none;
+      position: fixed;
+      bottom: 160px;
+      right: 20px;
+      width: 350px;
+      max-height: 500px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    #chat-header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #chat-messages {
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      background: white;
+    }
+
+    .message {
+      margin: 10px 0;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .bot {
+      justify-content: flex-start;
+    }
+
+    .user {
+      justify-content: flex-end;
+    }
+
+    .message img {
+      width: 30px;
+      height: 30px;
+      margin: 0 8px;
+      border-radius: 50%;
+    }
+
+    .message .text {
+      max-width: 70%;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .bot .text {
+      background: #e0e0e0;
+    }
+
+    .user .text {
+      background: #dcf8c6;
+    }
+
+    #chat-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+      background: white;
+    }
+
+    #chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+    }
+
+    #chat-input button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button id="chatbot-button">💬</button>
+
+<div id="chat-window">
+  <div id="chat-header">Nissan Travel AI</div>
+  <div id="chat-messages">
+    <div class="message bot">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" />
+      <div class="text">👋 ¡Hola! Soy tu asistente de viajes de Nissan Travel. ¿En qué puedo ayudarte hoy?</div>
+    </div>
+  </div>
+  <div id="chat-input">
+    <input type="text" id="user-input" placeholder="Escribe tu mensaje..." />
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+
+<script>
+  const apiKey = "sk-dacb90dec52b4600b6c9301710aede04";
+  const messages = [
+    {
+      role: "system",
+      content: `Eres Nissan Travel AI, un agente, que guarda fecha, lugar de recojo, lugar de destino, cant de personas, y un número para llamarle y cotizar. PIDES QUE RESPONDAN TODO EN UN SOLO MENSAJE. Somos empresa de transporte terrestre peruano, preciso. Usas emojis, no vendes productos. Usa el idioma que el usuario usa. Si no conoces algún lugar recolectas toda la información Y LE DICES QUE LE LLAMARÁN EN BREVEDAD POSIBLE. Estilo WhatsApp, responde en burbujas con imagen.`
+    }
+  ];
+
+  document.getElementById("chatbot-button").onclick = () => {
+    const chat = document.getElementById("chat-window");
+    chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+  };
+
+  async function sendMessage() {
+    const input = document.getElementById("user-input");
+    const text = input.value;
+    if (!text) return;
+
+    appendMessage("user", text);
+    input.value = "";
+
+    messages.push({ role: "user", content: text });
+
+    const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model: "deepseek-chat",
+        messages: messages
+      })
+    });
+
+    const data = await response.json();
+    const reply = data.choices[0].message.content;
+    messages.push({ role: "assistant", content: reply });
+    appendMessage("bot", reply);
+  }
+
+  function appendMessage(sender, text) {
+    const container = document.getElementById("chat-messages");
+    const div = document.createElement("div");
+    div.className = `message ${sender}`;
+
+    const img = document.createElement("img");
+    img.src = sender === "bot"
+      ? "https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+      : "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+
+    const bubble = document.createElement("div");
+    bubble.className = "text";
+    bubble.innerText = text;
+
+    if (sender === "bot") {
+      div.appendChild(img);
+      div.appendChild(bubble);
+    } else {
+      div.appendChild(bubble);
+      div.appendChild(img);
+    }
+
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
